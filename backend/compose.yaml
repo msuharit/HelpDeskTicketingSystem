@@ -1,0 +1,18 @@
+services:
+  api:
+    build: .
+    container_name: helpdesk-api
+    ports:
+      - "5000:5000"
+    environment:
+      PORT: 5000
+      JWT_SECRET: development-secret-change-later
+    volumes:
+      - ./src:/app/src
+      - helpdesk-data:/app/data
+      - /app/node_modules
+    command: npm run dev
+
+volumes:
+  helpdesk-data:
+  
