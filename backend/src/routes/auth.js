@@ -6,7 +6,7 @@ const db = require("../db"); // connects to sqlite
 const router = express.Router(); // groups endpoints to authentication
 
 
-// receives json and checks if email if so turns into user in sqlite db
+// receives json and checks if email if so turns into email into user in sqlite db
 router.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
