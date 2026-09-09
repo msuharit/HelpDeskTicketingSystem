@@ -1,6 +1,6 @@
-const express = require("express");
+const express = require("express"); // makes api routes
 const auth = require("../middleware/auth"); // auth from middleware
-const db = require("../db");
+const db = require("../db"); // connects to sqlite
 
 const router = express.Router();
 
